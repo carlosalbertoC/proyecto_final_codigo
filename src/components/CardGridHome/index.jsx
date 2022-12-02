@@ -51,7 +51,7 @@ export default function MultiActionAreaCard(props) {
               {data.descripcion}
             </Typography>
             <Typography variant="body2" color="succees">
-              {data.precio}
+              $ {data.precio}
             </Typography>
           </CardContent>
         </CardActionArea>
