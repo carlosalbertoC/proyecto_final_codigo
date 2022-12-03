@@ -14,6 +14,12 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Outlet } from "react-router-dom";
 
+import LogoutIcon from "@mui/icons-material/Logout";
+
+import { useNavigate, Navigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
+
 const pages = ["carrito", "perfil"];
 const settings = ["Carrito", "Perfil", "Salir"];
 
@@ -34,6 +40,16 @@ function ResponsiveAppBar() {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const { logout } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    console.log("Estoy en handlelogout");
+    logout();
+    navigate("/login");
   };
 
   return (
@@ -125,6 +141,9 @@ function ResponsiveAppBar() {
                 </Button>
               ))}
             </Box>
+            <Button variant="contained" color="error" onClick={handleLogout}>
+              Salir
+            </Button>
           </Toolbar>
         </Container>
       </AppBar>

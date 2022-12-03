@@ -11,6 +11,8 @@ const Login = () => {
 
   const { authLogin, isAuth } = useContext(AuthContext);
 
+  const [flag, setFlag] = useState(false);
+
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -40,12 +42,8 @@ const Login = () => {
           navigate("/");
         }
       } else {
-        if (index === data.length - 1) {
-          Swal.fire({
-            icon: "error",
-            text: data.message,
-          });
-        }
+        console.log(flag);
+        setFlag(true);
       }
     });
   };
@@ -104,6 +102,11 @@ const Login = () => {
             </Button>
           </Box>
           <Box>
+            {flag && (
+              <Typography variant="h6" gutterBottom sx={{ color: "red" }}>
+                Error al ingresar datos de usuario
+              </Typography>
+            )}
             ¿No tienes una cuenta?
             <Button
               component={Link}
