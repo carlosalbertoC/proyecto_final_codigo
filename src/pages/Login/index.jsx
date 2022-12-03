@@ -1,10 +1,8 @@
 import { Box, Paper, Typography, TextField, Button } from "@mui/material";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { get } from "../../services";
 import { Link, useNavigate, Navigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-
-import Swal from "sweetalert2";
 
 const Login = () => {
   const navigate = useNavigate();

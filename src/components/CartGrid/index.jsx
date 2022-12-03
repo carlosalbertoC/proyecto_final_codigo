@@ -4,9 +4,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
-import ImageIcon from "@mui/icons-material/Image";
-import WorkIcon from "@mui/icons-material/Work";
-import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 import Divider from "@mui/material/Divider";
 import ClearIcon from "@mui/icons-material/Clear";
 import Tooltip from "@mui/material/Tooltip";
@@ -17,7 +14,6 @@ import { CartContext } from "../../context/CartContext";
 
 import { CartButton } from "..";
 import { useContext } from "react";
-import { Image } from "@mui/icons-material";
 
 export default function InsetDividers() {
   const { cart, totalCart, removeCart } = useContext(CartContext);

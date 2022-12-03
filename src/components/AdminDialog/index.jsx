@@ -10,7 +10,7 @@ import { Box } from "@mui/material";
 
 import { useState } from "react";
 
-import { getCursos, postCursos } from "../../services";
+import { postCursos } from "../../services";
 
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);

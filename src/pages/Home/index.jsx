@@ -1,9 +1,8 @@
-import { CartFloating, GridHome } from "../../components";
+import { GridHome } from "../../components";
 
 const Home = () => {
   return (
     <div>
-      {/* <CartFloating /> */}
       <GridHome />
     </div>
   );

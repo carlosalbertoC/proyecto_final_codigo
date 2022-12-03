@@ -8,24 +8,11 @@ import { useContext } from "react";
 
 import "../../assets/react.svg";
 
-import { getCursos } from "../../services";
-import { useEffect, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 
 export default function MultiActionAreaCard(props) {
   const { data } = props;
-  const { cart, addCart, removeCart, totalCart } = useContext(CartContext);
-
-  // const [dataCursos, setDataCursos] = useState([]);
-
-  // const recogiendoData = async () => {
-  //   const data = await getCursos();
-  //   setDataCursos(data);
-  // };
-
-  // useEffect(() => {
-  //   recogiendoData();
-  // }, []);
+  const { cart, addCart } = useContext(CartContext);
 
   const handleClick = () => {
     console.log(data);

@@ -3,8 +3,6 @@ import Box from "@mui/material/Box";
 import Fab from "@mui/material/Fab";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-import { CardDialog } from "..";
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 

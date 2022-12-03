@@ -57,12 +57,6 @@ export const postCursos = async (body) => {
 
 export const deleteCursos = async (id) => {
   try {
-    // fetch(`cursos_url/${id}`, {
-    //   method: "DELETE",
-    // })
-    //   .then((res) => res.text()) // or res.json()
-    //   .then((res) => console.log(res));
-
     const response = await fetch(`${cursos_url}/${id}`, {
       method: "DELETE",
       headers: {
